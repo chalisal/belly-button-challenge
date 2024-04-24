@@ -29,7 +29,7 @@ function createPanels(dog) {
       
 }
 function optionChanged(x) {
-    createCharts(x);
+    makeBubble(x);
     createPanels(x);
 }
 
@@ -40,7 +40,7 @@ function init() {
         data.names.forEach((name) => {
             select.append("option").text(name).property("value", name);
         });
-        createCharts(data.names[0]);
+        makeBubble(data.names[0]);
         createPanels(data.names[0]);
     });
 }
